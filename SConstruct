@@ -1,7 +1,13 @@
 #!/usr/bin/scons
 
-env = Environment(platform="win32", tools=["mingw"])
+import os
 
+platform = os.name
+print("Compule on: {platform}".format(platform=platform))
+if platform == 'nt':
+    env = Environment(platform="win32", tools=["mingw"])
+else:
+    env = Environment()
 
 VERSION = "3.0"
 
