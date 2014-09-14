@@ -5,7 +5,7 @@ env = Environment(platform="win32", tools=["mingw"])
 
 VERSION = "3.0"
 
-CFLAGS = ["-fno-builtin", "-g", "-c", "-W", "-Wreturn-type", "-Wcomment", "-Ilib"]
+CFLAGS = ["-fno-builtin", "-g", "-W", "-Wreturn-type", "-Wcomment", "-Ilib"]
 
 libgif_source = [
     "lib/egif_lib.c", "lib/dgif_lib.c", "lib/gifalloc.c", "lib/gif_font.c", "lib/gif_hash.c",
