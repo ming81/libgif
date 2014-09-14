@@ -24,7 +24,7 @@ libgif_so = env.SharedLibrary(source=libgif_source, target="giflib", CFLAGS=CFLA
 
 gif2rgb = env.Program(source="util/gif2rgb.c", target="gif2rgb", CFLAGS=CFLAGS, LIBS=["gif"], LIBPATH=["."])
 gifbg = env.Program(source="util/gifbg.c", target="gifbg", CFLAGS=CFLAGS, LIBS=["gif"], LIBPATH=["."])
-gifclrmp = env.Program(source="util/gifclrmp.c", target="gifclrmp", CFLAGS=CFLAGS, LIBS=["gif"], LIBPATH=["."])
+gifclrmp = env.Program(source="util/gifclrmp.c", target="gifclrmp", CFLAGS=CFLAGS, LIBS=["gif", "m"], LIBPATH=["."])
 giffix = env.Program(source="util/giffix.c", target="giffix", CFLAGS=CFLAGS, LIBS=["gif"], LIBPATH=["."])
 gifhisto = env.Program(source="util/gifhisto.c", target="gifhisto", CFLAGS=CFLAGS, LIBS=["gif"], LIBPATH=["."])
 gifinto = env.Program(source="util/gifinto.c", target="gifinto", CFLAGS=CFLAGS, LIBS=["gif"], LIBPATH=["."])
